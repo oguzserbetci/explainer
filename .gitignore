@@ -1,0 +1,11 @@
+data/
+__pycache__/
+.ipynb_checkpoints/
+/results/
+.DS_Store
+/.fseventsd/
+.cache/
+wandb/
+notebooks/plots
+notebooks/attrs
+notebooks/archive

@@ -1,0 +1,34 @@
+{
+    "run_name": "imdb",
+    "model": {
+        "deep_classifier": false,
+        "aggregation": "avgmaxnorm_pool",
+        "pretrained_model_name_or_path": "google-bert/bert-base-uncased"
+    },
+    "data": {
+        "data_path": "data/imdb",
+        "eval_split": "eval",
+        "tasks": {
+            "sentiment": 2
+        },
+        "process_func": "data_processing.tokenize_with_overflow"
+    },
+    "training": {
+        "do_train": true,
+        "label_names": [
+            "labels", "overflow_to_sample_mapping"
+        ],
+        "eval_strategy": "epoch",
+        "save_strategy": "epoch",
+        "dataloader_drop_last": true,
+        "per_device_train_batch_size": 16,
+        "per_device_eval_batch_size": 16,
+        "gradient_accumulation_steps": 1,
+        "load_best_model_at_end": true,
+        "save_total_limit": 2,
+        "remove_unused_columns": false,
+        "metric_for_best_model": "eval_model/f1/macro",
+        "report_to": "none",
+        "logging_first_step": true
+    }
+}

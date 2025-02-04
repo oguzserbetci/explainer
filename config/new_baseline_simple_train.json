@@ -1,0 +1,16 @@
+{
+    "run_name": "tfidf_simple",
+    "data": {
+        "data_path": "data/dataset_chunked_befund",
+        "eval_split": "test",
+        "tasks": {
+            "caregrade_simple_label": 3,
+            "module1_simple_label": 3,
+            "module2_simple_label": 3,
+            "module3_simple_label": 3,
+            "module4_simple_label": 3,
+            "module5_simple_label": 3,
+            "module6_simple_label": 3
+        }
+    }
+}

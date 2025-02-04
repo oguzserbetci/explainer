@@ -1,0 +1,17 @@
+{
+    "run_name": "new_baseline",
+    "data": {
+        "data_path": "data/dataset_chunked_befund",
+        "eval_split": "test",
+        "tasks": {
+            "caregrade_label": 6,
+            "module1_label": 5,
+            "module2_label": 5,
+            "module3_label": 5,
+            "module4_label": 5,
+            "module5_label": 5,
+            "module6_label": 5
+        },
+        "label_map": null
+    }
+}

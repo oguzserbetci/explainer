@@ -1,0 +1,45 @@
+{
+    "run_name": "new_pool_avgmaxnorm_ff_simple",
+    "model": {
+        "aggregation": "avgmaxnorm_pool"
+    },
+    "training": {
+        "logging_steps": 0.025,
+        "lr_scheduler_type": "cosine_with_restarts",
+        "lr_scheduler_kwargs": {
+            "num_cycles": 10
+        },
+        "warmup_ratio": 0.05,
+        "metric_for_best_model": "eval_model/f1/macro",
+        "learning_rate": 2e-5,
+        "per_device_train_batch_size": 32,
+        "per_device_eval_batch_size": 32,
+        "num_train_epochs": 20,
+        "gradient_accumulation_steps": 1,
+        "eval_strategy": "epoch",
+        "load_best_model_at_end": true,
+        "save_strategy": "epoch",
+        "remove_unused_columns": false,
+        "report_to": "wandb",
+        "push_to_hub": false,
+        "logging_first_step": true,
+        "save_total_limit": 2,
+        "label_names": [
+            "labels", "overflow_to_sample_mapping"
+        ],
+        "do_train": true,
+        "do_predict": false
+    },
+    "data": {
+        "data_path": "data/dataset_chunked_befund",
+        "tasks": {
+            "caregrade_simple_label": 3,
+            "module1_simple_label": 3,
+            "module2_simple_label": 3,
+            "module3_simple_label": 3,
+            "module4_simple_label": 3,
+            "module5_simple_label": 3,
+            "module6_simple_label": 3
+        }
+    }
+}
