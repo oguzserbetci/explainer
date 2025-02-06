@@ -1,5 +1,5 @@
 """
-This code has been adapted from https://github.com/coastalcph/humans-contrastive-xai
+This code has been adapted from https://github.com/AmeenAli/XAI_Transformers (https://proceedings.mlr.press/v162/ali22a/ali22a.pdf)
 """
 
 
